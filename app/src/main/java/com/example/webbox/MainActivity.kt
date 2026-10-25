@@ -400,6 +400,12 @@ class MainActivity : AppCompatActivity() {
         adapter = WebsiteAdapter()
         websiteList.layoutManager = LinearLayoutManager(this)
         websiteList.adapter = adapter
+
+        // 🔥 核心修复：彻底封锁预览层的触摸穿透，防止划到背后列表
+        previewContainer.isClickable = true
+        previewContainer.isFocusable = true
+        bottomPanel.isClickable = true
+        bottomPanel.isFocusable = true
     }
 
     fun loadCustomBackground() {
