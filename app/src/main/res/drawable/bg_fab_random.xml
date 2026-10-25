@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <!-- 渐变：从浅银灰过渡到中灰，再到深灰 -->
+    <gradient
+        android:startColor="@color/pink_accent"
+        android:centerColor="@color/text_dim"
+        android:endColor="@color/pink_dark"
+        android:type="radial"
+        android:gradientRadius="50%p"/>
+    <!-- 边框：使用浅银灰 -->
+    <stroke android:width="2dp" android:color="@color/pink_accent"/>
+</shape>

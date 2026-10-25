@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_bg"
+    android:orientation="vertical">
+
+    <!-- 顶部标题栏 -->
+    <LinearLayout
+        android:id="@+id/topTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:background="@color/pink_dark">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="内置媒体播放器"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- 新增：全屏按钮 -->
+        <TextView
+            android:id="@+id/btnFullScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全屏"
+            android:textColor="@color/white"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/bg_input" />
+
+        <TextView
+            android:id="@+id/btnClosePlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关闭"
+            android:textColor="@color/white"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:background="@drawable/bg_input" />
+    </LinearLayout>
+
+    <!-- 播放器画面 -->
+    <FrameLayout
+        android:id="@+id/playerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#000000" />
+
+    <!-- 底部控制面板与列表容器 -->
+    <LinearLayout
+        android:id="@+id/bottomControlLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 自定义播放控制面板 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/pink_dark"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/btnPlayPause"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="45dp"
+                    android:text="播放/暂停"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/bg_input" />
+
+                <TextView
+                    android:id="@+id/btnPrev"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="45dp"
+                    android:text="上一集"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/bg_input"
+                    android:layout_marginStart="5dp" />
+
+                <TextView
+                    android:id="@+id/btnNext"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="45dp"
+                    android:text="下一集"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/bg_input"
+                    android:layout_marginStart="5dp" />
+
+                <TextView
+                    android:id="@+id/btnRepeatMode"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="45dp"
+                    android:text="列表循环"
+                    android:textColor="@color/pink_accent"
+                    android:gravity="center"
+                    android:background="@drawable/bg_input"
+                    android:layout_marginStart="5dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnSelectMedia"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:text="导入本地视频/音频 (支持多选)"
+                android:textColor="@color/white"
+                android:background="@color/pink_accent"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- 播放列表 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPlaylist"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#111111" />
+    </LinearLayout>
+</LinearLayout>

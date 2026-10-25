@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EE121212"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp">
+        <TextView android:id="@+id/tabWords" android:layout_width="0dp" android:layout_weight="1" android:layout_height="45dp" android:text="记词本" android:textColor="@color/black" android:textSize="16sp" android:textStyle="bold" android:gravity="center" android:background="@color/pink_accent" />
+        <TextView android:id="@+id/tabNotes" android:layout_width="0dp" android:layout_weight="1" android:layout_height="45dp" android:text="记事本" android:textColor="@color/white" android:textSize="16sp" android:gravity="center" android:background="@color/pink_dark" android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <!-- 记词本页面 -->
+    <LinearLayout android:id="@+id/layoutWords" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <EditText android:id="@+id/etSearchWord" android:layout_width="0dp" android:layout_weight="1" android:layout_height="40dp" android:hint="搜索词条..." android:textColor="@color/white" android:textColorHint="@color/text_dim" android:background="@drawable/bg_input" android:paddingHorizontal="10dp"/>
+            <!-- 补上：导入导出按钮 -->
+            <TextView android:id="@+id/btnImportWord" android:layout_width="wrap_content" android:layout_height="40dp" android:text="导入" android:textColor="@color/white" android:background="@drawable/bg_input" android:gravity="center" android:paddingHorizontal="10dp" android:layout_marginStart="5dp"/>
+            <TextView android:id="@+id/btnExportWord" android:layout_width="wrap_content" android:layout_height="40dp" android:text="导出" android:textColor="@color/white" android:background="@drawable/bg_input" android:gravity="center" android:paddingHorizontal="10dp" android:layout_marginStart="5dp"/>
+            <TextView android:id="@+id/btnAddWord" android:layout_width="wrap_content" android:layout_height="40dp" android:text="新建" android:textColor="@color/white" android:background="@color/pink_dark" android:gravity="center" android:paddingHorizontal="12dp" android:layout_marginStart="5dp"/>
+        </LinearLayout>
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="10dp">
+            <LinearLayout android:id="@+id/containerWords" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- 记事本页面 -->
+    <LinearLayout android:id="@+id/layoutNotes" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:orientation="vertical" android:visibility="gone">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <TextView android:id="@+id/btnImportNote" android:layout_width="0dp" android:layout_weight="1" android:layout_height="40dp" android:text="导入TXT" android:textColor="@color/white" android:background="@drawable/bg_input" android:gravity="center" />
+            <TextView android:id="@+id/btnExportNote" android:layout_width="0dp" android:layout_weight="1" android:layout_height="40dp" android:text="导出TXT" android:textColor="@color/white" android:background="@drawable/bg_input" android:gravity="center" android:layout_marginStart="10dp" />
+            <TextView android:id="@+id/btnAddNote" android:layout_width="0dp" android:layout_weight="1" android:layout_height="40dp" android:text="新建记事" android:textColor="@color/white" android:background="@color/pink_dark" android:gravity="center" android:layout_marginStart="10dp" />
+        </LinearLayout>
+        <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="10dp">
+            <LinearLayout android:id="@+id/containerNotes" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView android:id="@+id/btnCloseDialog" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginTop="15dp" android:text="关闭" android:textColor="@color/white" android:textSize="16sp" android:gravity="center" android:background="@color/pink_dark" />
+</LinearLayout>

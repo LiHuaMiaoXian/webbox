@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 基础背景色：从原来的幽暗紫黑改为高级纯黑/深灰 -->
+    <color name="black_bg">#121212</color>
+
+    <!-- 强调文字/高亮：从金色改为纯白，作为主要标题和图标颜色 -->
+    <color name="gold_text">#FFFFFF</color>
+
+    <!-- 核心主题色：原粉色改为浅银灰，用于按钮、激活态 -->
+    <color name="pink_accent">#ff6d00</color>
+
+    <!-- 主题深色：原深粉色改为中灰，用于按钮按压态或次级背景 -->
+    <color name="pink_dark">#424242</color>
+
+    <!-- 次要文字/弱化文本：改为中性灰 -->
+    <color name="text_dim">#9E9E9E</color>
+
+    <!-- 半透明面板背景：保持半透明黑，用于悬浮窗和侧边栏 -->
+    <color name="panel_bg">#D9000000</color>
+
+    <!-- 分割线：原半透明粉色改为半透明白/灰 -->
+    <color name="line_color">#33FFFFFF</color>
+
+    <!-- 纯黑纯白不变 -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
